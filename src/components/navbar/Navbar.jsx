@@ -3,7 +3,7 @@ import Links from "./links/Links"
 import styles from "./navbar.module.css"
 import { auth } from "@/lib/auth";
 
-const navbar = async () => {
+const Navbar = async () => {
   const session = await auth();
   return (
     <div className={styles.container}>
@@ -15,4 +15,4 @@ const navbar = async () => {
   )
 }
 
-export default navbar
+export default Navbar
