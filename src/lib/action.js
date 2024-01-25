@@ -74,6 +74,7 @@ export const deleteUser = async (formData) => {
 
   try {
     connectToDb();
+
     await Post.deleteMany({ userId: id });
     await User.findByIdAndDelete(id);
     console.log("deleted from db");
